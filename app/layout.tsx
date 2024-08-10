@@ -1,8 +1,8 @@
 import "./css/style.css";
 
 import { Inter } from "next/font/google";
-import { SidebarDemo } from "@/components/sidebar";
 import Footer from "@/components/ui/footer";
+import { SideBar } from "../components/sidebar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,7 +26,7 @@ export default function RootLayout({
         className={`${inter.variable} bg-gray-50 font-inter tracking-tight text-gray-900 antialiased flex flex-row justify-center`}
       >
         <div className="flex flex-row">
-          <SidebarDemo />
+          <SideBar />
           <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
             {children}
             <Footer />

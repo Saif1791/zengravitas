@@ -115,15 +115,12 @@ export const MobileSidebar = ({
     <>
       <div
         className={cn(
-          "h-10 px-4 py-4 flex flex-row md:hidden items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
+          "h-full w-full px-2 py-2 rounded-full flex flex-row md:hidden items-center bg-zenLightBlue opacity-100"
         )}
         {...props}
       >
-        <div className="flex justify-end z-20 w-full">
-          <IconMenu2
-            className="text-neutral-800 dark:text-neutral-200"
-            onClick={() => setOpen(!open)}
-          />
+        <div className="z-50 flex items-center" onClick={() => setOpen(!open)}>
+          <IconMenu2 className="text-black" />
         </div>
         <AnimatePresence>
           {open && (
@@ -136,12 +133,12 @@ export const MobileSidebar = ({
                 ease: "easeInOut",
               }}
               className={cn(
-                "fixed h-full w-full inset-0 p-10 z-[100] flex flex-row justify-between",
+                "fixed max-w-3xl inset-0 p-10 z-[100] flex flex-row justify-between bg-zenLightBlue opacity-100",
                 className
               )}
             >
               <div
-                className="absolute right-10 top-10 z-50 text-neutral-800"
+                className="absolute right-10 top-10 z-50 text-black"
                 onClick={() => setOpen(!open)}
               >
                 <IconX />

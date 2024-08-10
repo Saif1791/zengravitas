@@ -13,6 +13,7 @@ module.exports = {
     colors: {
       zenBlue: "#8DC9E1",
       zenLightBlue: "#C8E7F2",
+      black: "#000000",
     },
     extend: {
       fontFamily: {

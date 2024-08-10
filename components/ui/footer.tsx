@@ -1,10 +1,11 @@
 import Link from "next/link";
-import Logo from "./logo";
+import Logo from "@/public/images/Logo.png";
+import Image from "next/image";
 
 export default function Footer({ border = false }: { border?: boolean }) {
   return (
-    <footer>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <footer className="bg-zenLightBlue mt-32">
+      <div className="mx-auto w-screen max-w-full px-4 sm:px-6 md:ml-60">
         {/* Top area: Blocks */}
         <div
           className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]" : ""}`}
@@ -12,7 +13,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
           {/* 1st block */}
           <div className="space-y-2 sm:col-span-12 lg:col-span-4">
             <div>
-              <Logo />
+              <Image src={Logo} width={100} height={100} alt="Logo" />
             </div>
             <div className="text-sm text-gray-600">
               &copy; ZenGravitas - All rights reserved.
@@ -20,7 +21,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
           </div>
 
           {/* 2nd block */}
-          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
+          {/* <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h3 className="text-sm font-medium">Product</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -64,7 +65,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* 3rd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
@@ -178,7 +179,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   </svg>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
                   href="#0"
@@ -192,21 +193,9 @@ export default function Footer({ border = false }: { border?: boolean }) {
                     <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z"></path>
                   </svg>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
-        </div>
-      </div>
-
-      {/* Big text */}
-      <div className="relative -mt-16 h-60 w-full" aria-hidden="true">
-        <div className="pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 text-center text-[348px] font-bold leading-none before:bg-gradient-to-b before:from-gray-200 before:to-gray-100/30 before:to-80% before:bg-clip-text before:text-transparent before:content-['Zengravitas'] after:absolute after:inset-0 after:bg-gray-300/70 after:bg-clip-text after:text-transparent after:mix-blend-darken after:content-['Zengravitas'] after:[text-shadow:0_1px_0_white]"></div>
-        {/* Glow */}
-        <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-2/3"
-          aria-hidden="true"
-        >
-          <div className="h-56 w-56 rounded-full border-[20px] border-blue-700 blur-[80px]"></div>
         </div>
       </div>
     </footer>

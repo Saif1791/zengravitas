@@ -11,15 +11,10 @@ export default function HeroHome() {
   return (
     <section className="relative">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Hero content */}
         <div className="pb-12 pt-32 md:pb-20 md:pt-40">
-          {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
-            <div
-              className="mb-6 border-y [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"
-              data-aos="zoom-y-out"
-            >
-              <div className="-mx-0.5 flex justify-center -space-x-3">
+            <div className="mb-6 border-y" data-aos="zoom-y-out">
+              {/* <div className="-mx-0.5 flex justify-center -space-x-3">
                 <Image
                   className="box-content rounded-full border-2 border-gray-50"
                   src={Avatar01}
@@ -62,10 +57,10 @@ export default function HeroHome() {
                   height={32}
                   alt="Avatar 05"
                 />
-              </div>
+              </div> */}
             </div>
             <h1
-              className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl"
+              className="mb-6 border-y text-5xl font-bold md:text-6xl"
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
@@ -83,14 +78,14 @@ export default function HeroHome() {
                 Phasellus et erat ornare, ultrices diam mollis, feugiat ex.
                 Vivamus tincidunt,
               </p>
-              <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
+              <div className="relative">
                 <div
                   className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
                   data-aos="zoom-y-out"
                   data-aos-delay={450}
                 >
                   <a
-                    className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                    className="btn group mb-4 w-full text-black sm:mb-0 sm:w-auto"
                     href="#0"
                   >
                     <span className="relative inline-flex items-center">
@@ -113,7 +108,7 @@ export default function HeroHome() {
           {/* Hero image */}
           <div className="flex justify-center">
             <video width="700" height="360" autoPlay loop muted poster="">
-              <source src="/videos/videoplayback.mp4" type="video/mp4" />
+              <source src="/videos/videoplayback.mp4" type="video/mp4"  />
               Your browser does not support the video tag.
             </video>
           </div>

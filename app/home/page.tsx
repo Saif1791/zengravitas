@@ -8,7 +8,7 @@ import BusinessCategories from "@/components/business-categories";
 import FeaturesPlanet from "@/components/features-planet";
 import LargeTestimonial from "@/components/large-testimonial";
 import Cta from "@/components/cta";
-import EmblaCarousel from "@/components/ui/emblacarousel";
+import EmblaCarousel from "@/components/ui/emblacarousel.tsx";
 import { EmblaOptionsType } from "embla-carousel";
 import "../css/base.css";
 import "../css/embla.css";

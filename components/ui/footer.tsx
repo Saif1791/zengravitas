@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Footer({ border = false }: { border?: boolean }) {
   return (
     <footer className="bg-zenLightBlue mt-32">
-      <div className="mx-auto w-screen max-w-full px-4 sm:px-6 md:ml-60">
+      <div className="mx-auto w-screen max-w-full px-4 sm:px-6 md:ml-60 flex justify-center items-center">
         {/* Top area: Blocks */}
         <div
           className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]" : ""}`}
@@ -69,46 +69,16 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 3rd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Company</h3>
+            <h3 className="text-sm font-medium">Organisation</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
+                <Link className="transition hover:text-zenGray" href="#0">
                   About us
                 </Link>
               </li>
               <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Diversity & Inclusion
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
+                <Link className="hover:text-zenGray transition" href="#0">
                   Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Financial statements
                 </Link>
               </li>
             </ul>
@@ -119,27 +89,13 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <h3 className="text-sm font-medium">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
+                <Link className="transition hover:text-zenGray" href="#0">
                   Community
                 </Link>
               </li>
               <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
+                <Link className="transition hover:text-zenGray" href="#0">
                   Terms of service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Report a vulnerability
                 </Link>
               </li>
             </ul>
@@ -151,7 +107,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <ul className="flex gap-1">
               <li>
                 <Link
-                  className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
+                  className="flex items-center justify-center"
                   href="#0"
                   aria-label="Twitter"
                 >
@@ -166,7 +122,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               </li>
               <li>
                 <Link
-                  className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
+                  className="flex items-center justify-center"
                   href="#0"
                   aria-label="Medium"
                 >
@@ -179,21 +135,6 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   </svg>
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
-                  href="#0"
-                  aria-label="Github"
-                >
-                  <svg
-                    className="h-8 w-8 fill-current"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z"></path>
-                  </svg>
-                </Link>
-              </li> */}
             </ul>
           </div>
         </div>

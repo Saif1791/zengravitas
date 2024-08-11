@@ -1,3 +1,11 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f2f3f4;
+  scroll-behavior: smooth;
+}

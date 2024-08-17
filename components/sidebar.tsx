@@ -15,17 +15,17 @@ export function SideBar() {
   const links = [
     {
       label: "Home",
-      href: "#",
+      href: "/home",
       icon: <IconBrandTabler className="text-black h-5 w-5 flex-shrink-0" />,
     },
     {
       label: "About Us",
-      href: "#",
+      href: "/about",
       icon: <IconUserBolt className="text-black h-5 w-5 flex-shrink-0" />,
     },
     {
       label: "Lorem Ipsum",
-      href: "#",
+      href: "/about",
       icon: <IconSettings className="text-black h-5 w-5 flex-shrink-0" />,
     },
   ];
@@ -34,7 +34,7 @@ export function SideBar() {
     <div
       className={cn(
         "z-50 w-auto rounded-full md:rounded-md flex flex-row bg-zenLightBlue md:h-full flex-1 max-w-md overflow-hidden fixed md:left-0 mt-5 md:mt-0 left-5",
-        "md:h-screen" // for your use case, use `h-screen` instead of `h-[60vh]`
+        "md:h-screen"
       )}
     >
       <Sidebar open={open} setOpen={setOpen}>

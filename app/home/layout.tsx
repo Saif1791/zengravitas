@@ -12,9 +12,9 @@ export default function DefaultLayout({
 }) {
   useEffect(() => {
     AOS.init({
-      once: true,
-      disable: "phone",
-      duration: 700,
+      once: false,
+      disable: false,
+      duration: 1700,
       easing: "ease-out-cubic",
     });
   });

@@ -1,8 +1,34 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "@/public/images/Logo.png";
 import Image from "next/image";
+import axios from "axios";
 
 export default function Footer({ border = false }: { border?: boolean }) {
+  const downloadBrochure = async () => {
+    try {
+      const response = await axios.get("/api/download", {
+        responseType: "blob",
+      });
+
+      const contentDisposition = response.headers["content-disposition"];
+      const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
+      const fileName = fileNameMatch
+        ? fileNameMatch[1]
+        : "ZenGravitasBrochure.pdf";
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      link.setAttribute("download", fileName);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <footer className="bg-zenLightBlue mt-32">
       <div className="mx-auto w-screen max-w-full px-4 sm:px-6 md:ml-60 flex justify-center items-center">
@@ -19,67 +45,22 @@ export default function Footer({ border = false }: { border?: boolean }) {
               &copy; ZenGravitas - All rights reserved.
             </div>
           </div>
-
-          {/* 2nd block */}
-          {/* <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Product</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Features
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Integrations
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Pricing & Plans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Changelog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Our method
-                </Link>
-              </li>
-            </ul>
-          </div> */}
-
           {/* 3rd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h3 className="text-sm font-medium">Organisation</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link className="transition hover:text-zenGray" href="#0">
+                <Link className="transition hover:text-zenGray" href="/about">
                   About us
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-zenGray transition" href="#0">
-                  Blog
-                </Link>
+                <button
+                  className="hover:text-zenGray transition"
+                  onClick={downloadBrochure}
+                >
+                  Brochure
+                </button>
               </li>
             </ul>
           </div>
@@ -89,12 +70,12 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <h3 className="text-sm font-medium">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link className="transition hover:text-zenGray" href="#0">
+                <Link className="transition hover:text-zenGray" href="">
                   Community
                 </Link>
               </li>
               <li>
-                <Link className="transition hover:text-zenGray" href="#0">
+                <Link className="transition hover:text-zenGray" href="">
                   Terms of service
                 </Link>
               </li>

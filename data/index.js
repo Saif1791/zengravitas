@@ -101,3 +101,11 @@ export const mentors = [
     content: "",
   },
 ];
+
+export const images = [
+  "/images/c1.jpg",
+  "/images/c2.jpg",
+  "/images/c3.jpg",
+  "/images/c4.jpg",
+  "/images/c5.jpg",
+];

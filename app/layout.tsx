@@ -3,6 +3,7 @@ import "./css/style.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/ui/footer";
 import { SideBar } from "../components/sidebar";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
           <SideBar />
           <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
             {children}
+            <Analytics />
             <Footer />
           </div>
         </div>

@@ -13,6 +13,9 @@ module.exports = {
     colors: {
       zenBlue: "#8DC9E1",
       zenLightBlue: "#C8E7F2",
+      zenGray: "#F2F3F4",
+      black: "#000000",
+      white: "#ffffff",
     },
     extend: {
       fontFamily: {

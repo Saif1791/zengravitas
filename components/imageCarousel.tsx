@@ -18,7 +18,7 @@ export default function imageCarousel() {
           y: 0,
         }}
         transition={{
-          duration: 0.6,
+          duration: 0.8,
         }}
         className="z-50 flex flex-col justify-center items-center"
       ></motion.div>

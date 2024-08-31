@@ -15,7 +15,7 @@ export default function HeroHome() {
               width={800}
             />
             <h1
-              className="mb-6 mt-10 border-y-2 text-5xl font-bold md:text-6xl"
+              className="mb-6 mt-10 border-y-2 text-5xl font-bold md:text-6xl py-5"
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
@@ -23,7 +23,7 @@ export default function HeroHome() {
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 text-lg text-justify"
+                className="mb-8 text-xl text-center"
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >

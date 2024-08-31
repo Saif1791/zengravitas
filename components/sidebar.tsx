@@ -24,7 +24,7 @@ export function SideBar() {
       icon: <IconUserBolt className="text-black h-5 w-5 flex-shrink-0" />,
     },
     {
-      label: "Lorem Ipsum",
+      label: "Sign Up",
       href: "/about",
       icon: <IconSettings className="text-black h-5 w-5 flex-shrink-0" />,
     },

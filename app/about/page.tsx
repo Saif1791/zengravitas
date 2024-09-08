@@ -24,7 +24,7 @@ const page = () => {
         className="flex flex-col md:flex-row items-center justify-center md:items-start"
         data-aos="zoom-y-out"
       >
-        <p className="mt-20 md:w-3/6 text-justify text-base w-5/6 md:text-xl">
+        <p className="mt-20 md:w-2/6 text-justify text-base w-5/6 md:text-xl">
           Welcome to Zengravitas, a trusted partner of comprehensive educational
           and professional development services. We specialize in delivering a
           wide array of solutions designed to meet the diverse needs of academic

@@ -8,6 +8,8 @@ import {
   IconUserBolt,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import Image from "next/image";
+import LogoImage from "../public/images/Logo-alt.png";
 import { motion } from "framer-motion";
 import { cn } from "@/app/lib/utils";
 
@@ -58,11 +60,11 @@ export const Logo = () => {
       href="#"
       className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
     >
-      <div className="h-5 w-6 bg-black rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <Image src={LogoImage} alt="ZenGravitas"></Image>
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="font-bold text-black dark:text-white whitespace-pre"
+        className="text-xl text-black dark:text-black whitespace-pre"
       >
         ZenGravitas
       </motion.span>
@@ -75,9 +77,7 @@ export const LogoIcon = () => {
       href="#"
       className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
     >
-      <div className="h-5 w-6 bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0 text-center font-extrabold">
-        Z
-      </div>
+      <Image src={LogoImage} alt="ZenGravitas"></Image>
     </Link>
   );
 };

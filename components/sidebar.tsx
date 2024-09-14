@@ -64,13 +64,14 @@ export const Logo = () => {
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-xl text-black dark:text-black whitespace-pre"
+        className="text-xl text-black whitespace-pre font-semibold"
       >
         ZenGravitas
       </motion.span>
     </Link>
   );
 };
+
 export const LogoIcon = () => {
   return (
     <Link

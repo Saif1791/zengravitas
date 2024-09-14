@@ -98,7 +98,7 @@ export const CardDescription = ({
   children: React.ReactNode;
 }) => {
   return (
-    <p className={cn("mt-8 tracking-wide leading-relaxed text-sm", className)}>
+    <p className={cn("mt-8 tracking-wide leading-relaxed text-md", className)}>
       {children}
     </p>
   );
